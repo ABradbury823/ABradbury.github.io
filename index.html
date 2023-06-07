@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <script src="js/main.js" type="module"></script>
+    <title>Andrew Bradbury's Game Dev Portfolio</title>
+</head>
+<body>
+    <header>
+        <div id="title">Andrew Bradbury</div>
+    </header>
+
+    <nav id="top">
+        <ul class="navbar">
+            <li><a href="#projects"><i class="fas fa-gamepad"></i>&ensp;My Projects</a></li>
+            <li><a href="#resume"><i class="fas fa-book"></i>&ensp;Resume</a></li>
+            <li><a href="#about-me"><i class="fas fa-user"></i>&ensp;About Me</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!--Empty div for nav links-->
+        <div id="projects"></div>
+
+        <h2>Projects</h2>
+    
+        <section id="projects">
+            <!-- Personal Eyes Section -->
+            <h3><a href="https://violentvioiet.itch.io/personal-eyes">Personal Eyes</a></h3>
+
+            <image-slider>
+                <img slot="slider-images" src="media/personal-eyes.PNG" alt="Title screen of Personal Eyes">
+                <img slot="slider-images" src="media/cropbuster.jpg" alt="PLACEHOLDER">
+                <img slot="slider-images" src="media/siege-the-castle.PNG" alt="PLACEHOLDER">
+            </image-slider>
+
+            <div class="project" id="first-project">
+                <hr>
+                <!-- <img src="media/personal-eyes.PNG" alt="My former full-time Unity project, Personal Eyes" class="project-image"> -->
+                <p class="project-description">
+                    <i>Personal Eyes</i> is a 3D survival horror game made in Unity3D that I developed with a team of fellow students from June 2021 until 
+                    May 2022. The gameplay primarily revolves around the premise of gaining access to a third person camera as a resource rather than a feature. 
+                    My work on the project involved creating 3D environment models and textures, inspired by PS2-era graphics from titles like 
+                    <i>Fatal Frame</i> and the earlier <i>Resident Evil</i> games. My workflow included collaborating with the creative lead, 
+                    concept artist, and other 3D artists to make sure a cohesive artstyle was maintained. As a part of RIT's MAGIC Maker program, I 
+                    worked full-time developing the game, attending weekly team stand-ups as well as triweekly stand-ups with 
+                    Rockstar Games to gather feedback from industry professionals. We published a demo that includes our first level to 
+                    <a href="https://violentvioiet.itch.io/personal-eyes">itch.io</a> in May 2022.
+                </p>
+                <hr>
+            </div>
+            <button class="project-btn" id="btn1">Show More</button>
+
+            <!-- Atoll Tale Section -->
+            <h3><a href="https://dinowolf10.itch.io/atoll-tale">Atoll Tale</a></h3>
+
+            <image-slider>
+                <img slot="slider-images" src="media/atoll-tale.png" alt="Atoll Tale starting gameplay">
+                <img slot="slider-images" src="media/cropbuster.jpg" alt="PLACEHOLDER">
+                <img slot="slider-images" src="media/siege-the-castle.PNG" alt="PLACEHOLDER">
+            </image-slider>
+
+            <div class="project" id="second-project">
+                <hr>
+                <!-- <img src="media/atoll-tale.png" alt="Atoll Tale, a semester-long game project" class="project-image"> -->
+                <p class="project-description">
+                    <i>Atoll Tale</i> is a 3D puzzle-platformer I worked on from August to December 2022 with a team of student developers.
+                    The player controls Lula, a pirate who found herself shipwrecked on a series of islands in the middle of the ocean.
+                    Equipped with nothing but a trusty shovel, the player must navigate the circular levels and dig up as much treasure 
+                    as they can find in order to repair their ship. I acted as the team lead for this project as well as the team's artist, making
+                    both 2D and 3D assets. As the team lead, I handled the Trello board for task management, scheduled team meetings, and 
+                    made the final say on creative decisions. My artwork got me involved in character modeling for the player
+                    and the enemy, environment assets, texture shaders, and UI elements. Inspired by whimisical Nintendo games such
+                    as <i>Captain Toad: Treasure Tracker</i> and <i>The Legend of Zelda: Link's Awakening</i>, <i>Atoll Tale</i> has a highly-
+                    stylized artstyle, providing several unique and fun challenges for a first-time project lead. A demo that includes the first
+                    level has been uploaded to <a href="https://dinowolf10.itch.io/atoll-tale">itch.io</a>.
+                </p>
+                <hr>
+            </div>
+            <button class="project-btn" id="btn2">Show More</button>
+
+            <!-- Falling Hand Section -->
+            <h3><a href="https://people.rit.edu/amb7316/330/falling-hand/home.html">Falling Hand</a></h3>
+
+            <image-slider>
+                <img slot="slider-images" src="media/falling-hand.png" alt="Falling Hand sample gameplay">
+                <img slot="slider-images" src="media/cropbuster.jpg" alt="PLACEHOLDER">
+                <img slot="slider-images" src="media/siege-the-castle.PNG" alt="PLACEHOLDER">
+            </image-slider>
+
+            <div class="project" id="third-project">
+                <hr>
+                <!-- <img src="media/falling-hand.png" alt="A JavaScript web application, Falling Hand" class="project-image"> -->
+                <p class="project-description">
+                    <i>Falling Hand</i> is a web application I developed with a partner from November to December 2022. The game 
+                    is a simple falling sand simulator with a twist: by using the device's camera, the player can control where 
+                    particles are dropped in the scene. The application uses the HTML Canvas element for drawing visuals,
+                    ml5 PoseNet Machine Learning for tracking hand motions, and Bulma for styling. For this project, I was responsible for the 
+                    falling sand portion of the game as well as the controls. I used ES6 classes to make a grid that draws and controls a
+                    typed array of particles that can be one of three types: sand, water, and stone. Combined with the hotkeys on the mouse, 
+                    the controls allow for a great deal of customization to the experience, even allowing the user to use their mouse if
+                    they don't have a working camera. The website can be found <a href="https://people.rit.edu/amb7316/330/falling-hand/home.html">
+                    here</a> if you'd like to try it out!
+                </p>
+                <hr>
+            </div>
+            <button class="project-btn" id="btn3">Show More</button>
+
+            <!-- <h3><a href="">Project 3</a></h3>
+            <div class="project" id="third-project">
+                <img src="https://via.placeholder.com/620x450.png?text=Project+3" alt="Project 3 placeholder" class="project-image">
+                <p class="project-description">
+                    Description of the project, technologies and techniques used, my role in the project, description of the 
+                    project, technologies and techniques used, my role in the project, description of the project, technologies 
+                    and techniques used, my role in the project, description of the project, technologies and techniques used, 
+                    my role in the project, description of the project, technologies and techniques used, my role in the project, 
+                    description of the project, technologies and techniques used, my role in the project, description of the project, 
+                    technologies and techniques used, my role in the project.
+                </p>
+            </div> -->
+        </section>
+        
+        <!--Empty div for nav links-->
+        <div id="resume"></div>
+
+        <h2>Resume</h2>
+    
+        <section id="resume">
+            <p>
+            <i class="far fa-file-pdf"></i><a href="media/Andrew-Bradbury-Resume.pdf">View resume as a PDF</a>
+            </p>
+            <embed src="media/Andrew-Bradbury-Resume.pdf" alt="Resume embedded pdf" id="resume-image">
+        </section>
+    
+        <!--Empty div for nav links-->
+        <div id="about-me"></div>
+
+        <h2>About Me</h2>
+    
+        <section id="bio">
+            <p id="about-me-text">
+                I am a Gameplay Programmer located in Rochester, New York. I currently attend the Rochester Institute of Technology,
+                majoring in Game Design and Development. When I'm not doing coursework or working on my most recent project, I am 
+                frequently practicing my Japanese reading, writing, and speaking ability. My two passions, game-making and Japanese,
+                were formed back in my childhood when I played tons of video games and watched plenty of anime. I was always curious
+                what went into making games and was fascinated by how the hardwork of a team of people culminated in the creation of my
+                favorite games. 
+            </p>
+    
+            <div id="contact">
+                <p>Contact Me!</p>
+                <ul id="contact-list">
+                    <li><i class="far fa-envelope"></i>Email: amb7316 [at] rit.edu</li>
+                    <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/andrbrad">LinkedIn</a></li>
+                    <li><i class="fab fa-github"></i><a href="https://github.com/ABradbury823">GitHub</a></li>
+                </ul>
+            </div>
+            <img src="media/profile-image.jpg" alt="This is an image of me" id="bio-image">
+        </section>
+
+    </main>
+</body>
+</html>
