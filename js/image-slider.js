@@ -3,9 +3,7 @@ template.innerHTML = `
 <style>
     .container {
         padding: 1rem;
-        background-color: #ccc;
         border-radius: 10px;
-        box-shadow: 3px 3px 3px 3px #888;
         color: #eee;
     }
 
@@ -24,6 +22,7 @@ template.innerHTML = `
         scroll-behavior: smooth;
         border-radius: 1rem;
         user-select: none;
+        box-shadow: 3px 3px 10px #111;
     }
 
     .slider img {
@@ -37,7 +36,7 @@ template.innerHTML = `
         display: flex;
         column-gap: 1rem;
         position: absolute;
-        bottom: 5rem;
+        bottom: 1rem;
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
@@ -61,44 +60,50 @@ template.innerHTML = `
     .slider-arrows {
         display: flex;
         justify-content: space-between;
-        padding: .5rem;
-        background-color: #ccc;
         border-radius: 10px;
         margin-top: .25rem;
+        position: absolute;
+        bottom: 0%;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
     }
 
     .left-arrow, .right-arrow {
-        width: 5rem;
-        height: 3rem;
-        border-radius: 25%;
-        border: 1px solid #555555;
-        background-color: #a6a6a6;
-        opacity: .75;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 3rem;
+        height: 100%;
+        background-color: #111;
+        opacity: 0;
         transition: opacity ease 250ms;
         cursor: pointer;
         text-align: center;
-        line-height: 3rem;
-        font-size: 1.5rem;
-        color: #353535;
+        font-size: 3rem;
+        color: #777;
         user-select: none;
     }
 
     .left-arrow:hover, .right-arrow:hover {
-        opacity: 1;
+        opacity: .5;
     }
 </style>
 <section class="container">
     <div class="slider-wrapper">
-        <slot name="slider-images" class="slider">
-            <!-- List of images go here --!>
-        </slot>
+        <div>
+            <slot name="slider-images" class="slider">
+                <!-- List of images go here --!>
+            </slot>
+            <div class="slider-arrows">
+                <span class="left-arrow"><span>&#10092;</span></span>
+                <span class="right-arrow"><span>&#10093;</span></span>
+            </div>
+        </div>
         <div class="slider-nav">
             <!-- Slider dots to show location --!>
         </div>
-        <div class="slider-arrows">
-            <span class="left-arrow">&lt;</span>
-            <span class="right-arrow">&gt;</span>
-        </div>
+        
     </div>
 </section>
 `;
