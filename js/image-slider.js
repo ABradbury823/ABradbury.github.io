@@ -3,7 +3,6 @@ template.innerHTML = `
 <style>
     .container {
         padding: 1rem;
-        border-radius: 10px;
         color: #eee;
     }
 
@@ -20,7 +19,7 @@ template.innerHTML = `
         overflow: hidden;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        border-radius: 1rem;
+        border: 1px solid rgb(40,40,40);
         user-select: none;
         box-shadow: 3px 3px 10px #111;
     }
@@ -51,6 +50,7 @@ template.innerHTML = `
         opacity: .5;
         transition: opacity ease 250ms;
         cursor: pointer;
+        z-order: 3;
     }
 
     .slider-dot:hover {
@@ -60,11 +60,9 @@ template.innerHTML = `
     .slider-arrows {
         display: flex;
         justify-content: space-between;
-        border-radius: 10px;
         margin-top: .25rem;
         position: absolute;
         bottom: 0%;
-        z-index: 2;
         width: 100%;
         height: 100%;
     }
@@ -75,12 +73,13 @@ template.innerHTML = `
         justify-content: center;
         width: 3rem;
         height: 100%;
-        background-color: #111;
+        background-color: #000;
         opacity: 0;
         transition: opacity ease 250ms;
         cursor: pointer;
         text-align: center;
-        font-size: 3rem;
+        font-size: 2.75rem;
+        font-weight: bold;
         color: #777;
         user-select: none;
     }
@@ -103,7 +102,6 @@ template.innerHTML = `
         <div class="slider-nav">
             <!-- Slider dots to show location --!>
         </div>
-        
     </div>
 </section>
 `;
@@ -127,7 +125,6 @@ class ImageSlider extends HTMLElement {
         //this.imageData = this.dataset.images.split(",") ?? [];
         this.mediaElements = this.slider.assignedNodes();
         
-        console.log(this.slider.assignedNodes())
         //go through images and make slider dot
         for (let i = 0; i < this.mediaElements.length; i ++) {
             let newDot = document.createElement("span");
@@ -139,7 +136,6 @@ class ImageSlider extends HTMLElement {
 
         this.currentImage = this.mediaElements[0] ?? null;
         this.currentIndex = 0;
-
 
         //hooking up button events
         const leftWrapper = e => this.changeImage(this.currentIndex - 1);
@@ -183,8 +179,6 @@ class ImageSlider extends HTMLElement {
         //sanitize index
         if(this.currentIndex < 0) this.currentIndex = this.totalElements - 1;
         else if(this.currentIndex >= this.totalElements) this.currentIndex = 0;
-
-        //console.log("change image to index " + this.currentIndex);
 
         this.currentImage = this.mediaElements[this.currentIndex];
 
