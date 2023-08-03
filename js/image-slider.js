@@ -2,13 +2,13 @@ const template = document.createElement("template");
 template.innerHTML = `
 <style>
     .container {
-        padding: 1rem;
+        padding: 1rem 0;
         color: #eee;
     }
 
     .slider-wrapper {
         position: relative;
-        max-width: 48rem;
+        max-width: 40rem;
         margin: 0 auto;
     }
 
@@ -22,13 +22,6 @@ template.innerHTML = `
         border: 1px solid rgb(40,40,40);
         user-select: none;
         box-shadow: 3px 3px 10px #111;
-    }
-
-    .slider img {
-        flex: 1 0 100%;
-        scroll-snap-align: start;
-        object-fit: cover;
-        max-width: 48rem;
     }
 
     .slider-nav {

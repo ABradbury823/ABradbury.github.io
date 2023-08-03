@@ -14,6 +14,7 @@ p, .navbar, #contact, .project-btn{
 header #title{
     font-size: 2rem;
     text-align: center;
+    font-variant-caps: small-caps;
 }
 
 header, nav#top{
@@ -66,7 +67,7 @@ ul.navbar{
 
 main{
     margin: 0 10%;
-    padding: 2rem;
+    padding: 2rem 0;
     background-color: #1c191e;
 }
 
@@ -80,46 +81,53 @@ blockquote{
     margin: 1rem 0px
 }
 
-h2{font-size: 2em;}
+h2{
+    font-size: 2em;
+    font-weight: normal;
+    font-variant-caps: small-caps;
+}
+
+section{
+    border-bottom: solid 1px #575757;
+    padding-bottom: 1rem;
+}
 
 /* === PROJECTS SECTION === */
 
 h3{
-    margin-bottom: 2rem;
-    text-decoration: underline;
-    align-self: flex-start;
+    margin: 1rem 0;
 }
 
 h3 a{
     text-decoration: none;
+    font-weight: normal;
+    font-variant-caps: small-caps;
     font-size: 1.5rem;
     font-style: italic;
 }
 
 h3 a:link, #contact a:link{color: #eee; }
 h3 a:visited, #contact a:visited{color: #eee; }
-h3 a:focus, #contact a:focus{color: #eee; text-decoration: underline; font-size: 1.6rem; }
-h3 a:hover, #contact a:hover{color: #eee; text-decoration: underline; font-size: 1.6rem; }
+h3 a:focus, #contact a:focus{color: #eee; text-decoration: underline; font-size: 1.9rem; }
+h3 a:hover, #contact a:hover{color: #eee; text-decoration: underline; font-size: 1.9rem; }
 h3 a:active, #contact a:active{color: #eee; text-decoration: underline; border: dotted 1px #eee; }
+
+section#projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+div.project-group{
+    margin-right: 2.5%;
+}
 
 image-slider img, image-slider slot video{
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
-    max-width: 48rem;
-}
-
-section{
-    border-bottom: solid 1px #575757;
-    padding-bottom: .5rem;
-    display: flex;
-    flex-direction: column;
-}
-
-section.projects{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    max-width: 40rem;
 }
 
 /* === RESUME SECTION === */
@@ -180,19 +188,23 @@ section#bio{
 #bio-image{
     grid-area: image;
     justify-self: left;
-    max-width: 380px;
+    max-width: 225px;
     width: 100%;
     height: auto;
-    border: solid 5px #575757;
+    border: solid 5px rgb(40,40,40);
     margin-bottom: 1rem;
 }
 
 #contact{
     grid-area: contact;
+    justify-self: center;
+    width: 100%;
     font-size: 1.5rem;
 }
 
 #contact-list{
+    display: flex;
+    justify-content: space-evenly;
     list-style-type: none;
     margin: 1rem 0;
     padding: 1rem 0;
@@ -221,20 +233,14 @@ section#bio{
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "about-me image"
-                             "contact  image";
+                             "contact  contact";
     }
 
     #bio-image{
         grid-area: image;
         justify-self: right;
-        border: solid 5px #575757;
         margin-bottom: 1rem;
     }
 
     #contact{position: static;}
-
-    #contact-list{
-        margin: 1rem 0;
-        padding: 1rem 0;
-    }
 }

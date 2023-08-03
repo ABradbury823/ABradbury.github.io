@@ -37,6 +37,8 @@ hr{
 .project-description{
     margin: 1rem 0;
     line-height: 1.5rem;
+    display: inline-block;
+    max-width: 40rem;
 }
 </style>
 
@@ -64,7 +66,7 @@ class ProjDesc extends HTMLElement {
         this.content = this.shadowRoot.querySelector(".project");
         this.button = this.shadowRoot.querySelector(".project-btn");
 
-        this.content.hidden = true;
+        this.content.hidden = false;
 
         //button event
         this.button.onclick = e => this.toggleVisible();
