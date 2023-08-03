@@ -82,7 +82,7 @@ blockquote{
 }
 
 h2{
-    font-size: 2em;
+    font-size: 2.25rem;
     font-weight: normal;
     font-variant-caps: small-caps;
 }
@@ -98,12 +98,11 @@ h3{
     margin: 1rem 0;
 }
 
-h3 a{
+h3 a, #contact a{
     text-decoration: none;
     font-weight: normal;
     font-variant-caps: small-caps;
-    font-size: 1.5rem;
-    font-style: italic;
+    font-size: 1.75rem;
 }
 
 h3 a:link, #contact a:link{color: #eee; }
@@ -116,7 +115,6 @@ section#projects{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-end;
 }
 
 div.project-group{
@@ -175,12 +173,12 @@ section#bio{
     grid-template-areas: "about-me"
                          "image"
                          "contact";
-    margin-bottom: 1rem;
 }
 
 #about-me-text{
     grid-area: about-me;
     margin-top: 0;
+    margin-bottom: 0;
     margin-right: 1rem;
     line-height: 1.5rem;
 }
@@ -188,11 +186,11 @@ section#bio{
 #bio-image{
     grid-area: image;
     justify-self: left;
-    max-width: 225px;
+    max-width: 250px;
     width: 100%;
     height: auto;
-    border: solid 5px rgb(40,40,40);
-    margin-bottom: 1rem;
+    border: solid 1px rgb(40,40,40);
+    box-shadow: 3px 3px 3px #111;
 }
 
 #contact{
@@ -204,13 +202,13 @@ section#bio{
 
 #contact-list{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     list-style-type: none;
-    margin: 1rem 0;
-    padding: 1rem 0;
+    margin: 0;
+    padding: 0;
 }
 
-#contact-list i{margin: 1rem .25rem 1rem 0;}
+#contact-list i{margin: 1rem 2rem 1rem 0;}
 
 @media screen and (min-width: 1050px)
 {
@@ -230,8 +228,8 @@ section#bio{
 @media screen and (min-width: 1250px)
 {
     section#bio{
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr .1fr;
+        grid-template-columns: 1fr .5fr;
         grid-template-areas: "about-me image"
                              "contact  contact";
     }
@@ -239,7 +237,6 @@ section#bio{
     #bio-image{
         grid-area: image;
         justify-self: right;
-        margin-bottom: 1rem;
     }
 
     #contact{position: static;}

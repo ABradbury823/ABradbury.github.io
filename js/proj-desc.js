@@ -66,7 +66,7 @@ class ProjDesc extends HTMLElement {
         this.content = this.shadowRoot.querySelector(".project");
         this.button = this.shadowRoot.querySelector(".project-btn");
 
-        this.content.hidden = false;
+        this.content.hidden = true;
 
         //button event
         this.button.onclick = e => this.toggleVisible();
