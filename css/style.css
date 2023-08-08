@@ -128,6 +128,19 @@ image-slider img, image-slider slot video{
     max-width: 40rem;
 }
 
+proj-desc span {
+    white-space: pre-line;
+}
+
+proj-desc span a{
+    color: white;
+}
+
+proj-desc span a:hover{
+    font-size: 1.1rem;
+    color: white;
+}
+
 /* === RESUME SECTION === */
 
 #resume{
