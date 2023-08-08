@@ -48,7 +48,6 @@ hr{
         <slot name="proj-desc" class="project-description">
             <!-- Project description goes here --!>
         </slot>
-        <hr>
     </div>
     <button class="project-btn">Show More</button>
 </div>
@@ -66,7 +65,7 @@ class ProjDesc extends HTMLElement {
         this.content = this.shadowRoot.querySelector(".project");
         this.button = this.shadowRoot.querySelector(".project-btn");
 
-        this.content.hidden = true;
+        this.content.hidden = false;
 
         //button event
         this.button.onclick = e => this.toggleVisible();

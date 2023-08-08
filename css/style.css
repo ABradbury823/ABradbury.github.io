@@ -130,6 +130,7 @@ image-slider img, image-slider slot video{
 
 proj-desc span {
     white-space: pre-line;
+    line-height: 3rem;
 }
 
 proj-desc span a{
