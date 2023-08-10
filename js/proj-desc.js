@@ -20,7 +20,7 @@ template.innerHTML = `
     font-variant-caps: all-small-caps;
     font-weight: bolder;
     color: #eee;
-    background-color: rgb(214, 71, 71);
+    background-color: transparent;
     border-radius: 2px;
     border: 3px solid rgb(55,55,55);
     align-self: center;
@@ -78,7 +78,7 @@ class ProjDesc extends HTMLElement {
     }
 
     render(){
-        this.content.hidden ? this.button.textContent = "Show More" : this.button.textContent = "Show Less";
+        this.content.hidden ? this.button.innerHTML = "Show More&ensp;&#x2193;" : this.button.innerHTML = "Show Less&ensp;&#x2191;";
     }
 
     toggleVisible(){
