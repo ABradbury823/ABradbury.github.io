@@ -128,16 +128,11 @@ image-slider img, image-slider slot video{
     max-width: 40rem;
 }
 
-proj-desc span {
-    white-space: pre-line;
-    line-height: 3rem;
-}
-
-proj-desc span a{
+proj-desc a{
     color: white;
 }
 
-proj-desc span a:hover{
+proj-desc a:hover{
     font-size: 1.1rem;
     color: white;
 }
