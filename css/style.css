@@ -128,6 +128,10 @@ image-slider img, image-slider slot video{
     max-width: 40rem;
 }
 
+.multiline {
+    white-space: pre-line;
+}
+
 proj-desc a{
     color: white;
 }
@@ -149,6 +153,10 @@ proj-desc a:hover{
     margin: 1rem .25rem 1rem 0;
     color: rgb(214, 71, 71);
     font-size: 1.5rem;
+}
+
+#resume p{
+    margin: 0;
 }
 
 embed{
