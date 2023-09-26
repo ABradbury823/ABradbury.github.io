@@ -121,11 +121,13 @@ div.project-group{
     margin-right: 2.5%;
 }
 
-image-slider img, image-slider slot video{
+image-slider img, image-slider video, image-slider iframe {
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
     max-width: 40rem;
+    height: 100%;
+    z-index: 1;
 }
 
 .multiline {

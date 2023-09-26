@@ -22,6 +22,7 @@ template.innerHTML = `
         border: 1px solid rgb(40,40,40);
         user-select: none;
         box-shadow: 3px 3px 10px #111;
+        z-index: 1;
     }
 
     .slider-nav {
@@ -31,7 +32,7 @@ template.innerHTML = `
         bottom: 1rem;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 1;
+        z-index: 3;
     }
 
     .slider-dot {
@@ -43,7 +44,7 @@ template.innerHTML = `
         opacity: .5;
         transition: opacity ease 250ms;
         cursor: pointer;
-        z-order: 3;
+        z-index: 3;
     }
 
     .slider-dot:hover {
@@ -75,6 +76,7 @@ template.innerHTML = `
         font-weight: bold;
         color: #777;
         user-select: none;
+        z-index: 2;
     }
 
     .left-arrow:hover, .right-arrow:hover {
