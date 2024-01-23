@@ -115,6 +115,7 @@ section#projects{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 div.project-group{
@@ -125,7 +126,8 @@ image-slider img, image-slider video, image-slider iframe {
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
-    max-width: 40rem;
+    max-width: 35rem;
+    width: 35rem;
     height: 100%;
     z-index: 1;
 }

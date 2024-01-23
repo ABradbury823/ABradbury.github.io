@@ -8,7 +8,7 @@ template.innerHTML = `
 
     .slider-wrapper {
         position: relative;
-        max-width: 40rem;
+        max-width: 35rem;
         margin: 0 auto;
     }
 

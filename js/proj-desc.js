@@ -38,7 +38,7 @@ hr{
     margin: 1rem 0;
     line-height: 1.5rem;
     display: inline-block;
-    max-width: 40rem;
+    max-width: 35rem;
 }
 </style>
 
