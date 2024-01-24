@@ -199,7 +199,7 @@ section#bio{
 #about-me-text{
     grid-area: about-me;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     margin-right: 1rem;
     line-height: 1.5rem;
 }
@@ -229,7 +229,7 @@ section#bio{
     padding: 0;
 }
 
-#contact-list i{margin: 1rem 2rem 1rem 0;}
+#contact-list i{margin: 1rem;}
 
 @media screen and (min-width: 1050px)
 {
