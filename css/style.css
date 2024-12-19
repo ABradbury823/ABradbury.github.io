@@ -207,7 +207,7 @@ section#bio{
 #bio-image{
     grid-area: image;
     justify-self: left;
-    max-width: 250px;
+    max-width: 400px;
     width: 100%;
     height: auto;
     border: solid 1px rgb(40,40,40);
